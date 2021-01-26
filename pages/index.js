@@ -1,11 +1,13 @@
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 import db from '../db.json';
-import Widget from '../src/components/Widget'
-import QuizLogo from '../src/components/QuizLogo'
-import QuizBackground from '../src/components/QuizBackground'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-// import Head from 'next/head'
+import Widget from '../src/components/Widget';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
 // import Link from 'next/link'
 
 // const BackgroundImage = styled.div`
@@ -27,39 +29,55 @@ export const QuizContainer = styled.div`
 `;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
   return (
-    // <div>
-    //   <Head>
-    //     <title>Tech Questions</title>
+    <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Scuba Diving Quiz</title>
+        <meta property="og:title" content="Scuba Diving Quiz" key="title" />
+        <meta property="og:image" content={db.bg} />
+        <meta property="og:image:type" content="image/jpg" />
+      </Head>
+      <QuizContainer>
+        <QuizLogo />
+        <Widget>
+          <Widget.Header>
+            <h1>{db.title}</h1>
+          </Widget.Header>
+          <Widget.Content>
+            <p>{db.description}</p>
+            <form onSubmit={function (event) {
+              event.preventDefault();
+              router.push(`/quiz?name=${name}`);
+            }}
+            >
+              <input
+                onChange={function (event) {
+                  // State
+                  // name = event.target.value;
+                  setName(event.target.value);
+                }}
+                placeholder="Type your name."
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Play
+                {name}
+              </button>
+            </form>
+          </Widget.Content>
+        </Widget>
 
-    //     <meta property="og:title" content="Tech Questions" key="title" />
-    //     <meta property="og:image" content={db.bg} />
-    //     <meta property="og:image:type" content="image/jpg" />
+        <Widget>
+          <Widget.Content>
+            <h1>Guys Quizzes</h1>
 
-    //   </Head>
-      <QuizBackground backgroundImage={db.bg}>
-        <QuizContainer>
-          <QuizLogo />
-          <Widget>
-            <Widget.Header>
-              <h1>{db.title}</h1>
-            </Widget.Header>
-            <Widget.Content>
-              <p>{db.description}</p>
-            </Widget.Content>
-          </Widget>
-
-          <Widget>
-            <Widget.Content>
-              <h1>Quizes da Galera</h1>
-
-              <p>lorem ipsum dolor sit amet...</p>
-            </Widget.Content>
-          </Widget>
-          <Footer />
-        </QuizContainer>
-        <GitHubCorner projectUrl="https://github.com/fncarneiro" />
-      </QuizBackground>
-    // </div>
+            <p>lorem ipsum dolor sit amet...</p>
+          </Widget.Content>
+        </Widget>
+        <Footer />
+      </QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/fncarneiro" />
+    </QuizBackground>
   );
 }

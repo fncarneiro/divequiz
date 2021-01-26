@@ -1,5 +1,5 @@
 {
-    "bg": "/scuba2.jpg",     
+    "bg": "/scuba4.jpg",     
     "title": "Scuba Diving Quiz",
     "description": "Test your knowledge of marine life and scuba diving.",
     "questions": [
@@ -36,7 +36,18 @@
             "mainBg": "#171B35",
             "contrastText": "#FFFFFF",
             "wrong": "#FF5722",
-            "success": "#4CAF50"
+            "success": "#4CAF50",
+            "transparent" : "#00000070",
+            "seafoam_light" : "#93E9BE",
+            "seafoam_med" : "#29C979",
+            "seafoam_med_dark" : "#197D4B",
+            "seafoam_dark" :"#125734",
+            "cream" : "#F7EBDB",
+            "peach" : "#FFD294",
+            "salmon" : "#F3A089",
+            "misty_blue" : "#A0AFB7",
+            "blue_groto" : "#067593",
+            "baby_blue" : "#09A9C8"
         },
         "borderRadius": "4px"
     }
