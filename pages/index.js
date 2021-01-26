@@ -5,8 +5,8 @@ import QuizLogo from '../src/components/QuizLogo'
 import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
-import Head from 'next/head'
-import Link from 'next/link'
+// import Head from 'next/head'
+// import Link from 'next/link'
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
