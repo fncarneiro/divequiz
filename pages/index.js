@@ -5,7 +5,8 @@ import QuizLogo from '../src/components/QuizLogo'
 import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
-//import scuba from '../src/components/QuizBackground/assets/scuba3.png';
+import Head from 'next/head'
+import Link from 'next/link'
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -27,28 +28,38 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <QuizBackground backgroundImage={db.bg}>
-      <QuizContainer>
-        <QuizLogo />
-        <Widget>
-          <Widget.Header>
-            <h1>{db.title}</h1>
-          </Widget.Header>
-          <Widget.Content>
-            <p>{db.description}</p>
-          </Widget.Content>
-        </Widget>
+    // <div>
+    //   <Head>
+    //     <title>Tech Questions</title>
 
-        <Widget>
-          <Widget.Content>
-            <h1>Quizes da Galera</h1>
+    //     <meta property="og:title" content="Tech Questions" key="title" />
+    //     <meta property="og:image" content={db.bg} />
+    //     <meta property="og:image:type" content="image/jpg" />
 
-            <p>lorem ipsum dolor sit amet...</p>
-          </Widget.Content>
-        </Widget>
-        <Footer />
-      </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/fncarneiro" />
-    </QuizBackground>
+    //   </Head>
+      <QuizBackground backgroundImage={db.bg}>
+        <QuizContainer>
+          <QuizLogo />
+          <Widget>
+            <Widget.Header>
+              <h1>{db.title}</h1>
+            </Widget.Header>
+            <Widget.Content>
+              <p>{db.description}</p>
+            </Widget.Content>
+          </Widget>
+
+          <Widget>
+            <Widget.Content>
+              <h1>Quizes da Galera</h1>
+
+              <p>lorem ipsum dolor sit amet...</p>
+            </Widget.Content>
+          </Widget>
+          <Footer />
+        </QuizContainer>
+        <GitHubCorner projectUrl="https://github.com/fncarneiro" />
+      </QuizBackground>
+    // </div>
   );
 }
