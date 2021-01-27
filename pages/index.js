@@ -8,6 +8,11 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
+import QuizContainer from '../src/components/QuizContainer';
+
+
 // import Link from 'next/link'
 
 // const BackgroundImage = styled.div`
@@ -16,17 +21,6 @@ import GitHubCorner from '../src/components/GitHubCorner';
 //   background-size: cover;
 //   background-position: center;
 // `;
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
 
 export default function Home() {
   const router = useRouter();
@@ -47,23 +41,20 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
-            <form onSubmit={function (event) {
+            <form onSubmit={ (event) => {
               event.preventDefault();
               router.push(`/quiz?name=${name}`);
             }}
             >
-              <input
-                onChange={function (event) {
-                  // State
-                  // name = event.target.value;
-                  setName(event.target.value);
-                }}
+              <Input
+                name="name"
+                onChange={(event) => { setName(event.target.value); }}
                 placeholder="Type your name."
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
-                Play
-                {name}
-              </button>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Let´s Play  ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
