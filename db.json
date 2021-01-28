@@ -6,7 +6,7 @@
         {
             "image": "/images/questions/question1.jpg",
             "title": "Which animal most causes death in humans?",
-            "description": "Sharks kill 8 to 12 people each year world wide. Humans kill over 30 million sharks each year.",
+            "description": "Answer: Mosquitoes. Sharks kill 8 to 12 people each year world wide. Humans kill over 30 million sharks each year.",
             "answer": 1,
             "alternatives": [
                 "Snake",
@@ -19,7 +19,7 @@
         {
             "image": "/images/questions/question2.jpg",
             "title": "What colors you can't see from 10 meters deep?",
-            "description": "Once you get below 10 metres depth, you can’t see red or yellow! If you cut yourself your blood looks blue.",
+            "description": "Answer: Red and yellow. Once you get below 10 metres depth, you can’t see red or yellow! If you cut yourself your blood looks blue.",
             "answer": 3,
             "alternatives": [
                 "White and red",
@@ -31,7 +31,7 @@
         {
             "image": "/images/questions/question3.jpg",
             "title": "What is the cylinder content of the scuba equipment that allows the diver to breathe?",
-            "description": "Oxygen becomes toxic when under pressure, so at depths greater than 42 metres, special gases with low oxygen are used. Compressed air is generally used.",
+            "description": "Answer: Air. Oxygen becomes toxic when under pressure, so at depths greater than 42 metres, special gases with low oxygen are used. Compressed air is generally used.",
             "answer": 2,
             "alternatives": [
                 "Oxygen",
@@ -43,8 +43,8 @@
         {
             "image": "/images/questions/question4.jpg",
             "title": "What physical effect every diver feels when diving at a depth of more than 25 meters?",
-            "description": "Nitrogen narcosis affects all divers – it’s the effect of Nitrogen beaing breathed at depths of more than 25 metres. It’s a little like being slightly drunk.",
-            "answer": 3,
+            "description": "Answer: Air. Nitrogen narcosis affects all divers – it’s the effect of Nitrogen beaing breathed at depths of more than 25 metres. It’s a little like being slightly drunk.",
+            "answer": 2,
             "alternatives": [
                 "Pressure",
                 "Dysentery ",
@@ -56,7 +56,7 @@
         {
             "image": "/images/questions/question5.jpg",
             "title": "What is the largest living structure on Earth?",
-            "description": "The Great barrier reef is the largest living organism on the planet, with a surface area greater than England.",
+            "description": "Answer: The Great barrier reef is the largest living organism on the planet, with a surface area greater than England.",
             "answer": 1,
             "alternatives": [
                 "Amazon florest",
@@ -69,7 +69,7 @@
         {
             "image": "/images/questions/question6.jpg", 
             "title": "What is the depth record for a scuba dive?",
-            "description": "The world deepest Scuba dive was more than 332.35m. Going down is the easy part, It will only take 15 mins to get down to those depths but about 15 hours to come up. Ascending from a world record scuba dive would also require a large support team of safety divers and other highly experienced Technical Divers.",
+            "description": "Answer: The world deepest Scuba dive was more than 332.35m. Going down is the easy part, It will only take 15 mins to get down to those depths but about 15 hours to come up. Ascending from a world record scuba dive would also require a large support team of safety divers and other highly experienced Technical Divers.",
             "answer": 3,
             "alternatives": [
                 "156.22 m",
@@ -81,7 +81,7 @@
         {
             "image": "/images/questions/question7.jpg",
             "title": "what disease is caused by the lack of decompression of the scuba diver?",
-            "description": "Caisson’s Disease also known as decompression sickness is a more serious effect of nitrogen when nitrogen starts to form bubbles in the diver’s body.",
+            "description": "Answer: Caisson’s Disease also known as decompression sickness is a more serious effect of nitrogen when nitrogen starts to form bubbles in the diver’s body.",
             "answer": 0,
             "alternatives": [
                 "Caisson’s",
@@ -94,7 +94,7 @@
         {
             "image": "/images/questions/question8.jpg",
             "title": "How many species of shark are there and how many are dangerous to humans?",
-            "description": "Sharks, especially great whites, were catapulted into the public eye with the release of the film Jaws in the summer of 1975. The film is the story of a massive great white that terrorizes a seaside community, and the image of the cover alone—the exposed jaws of a massive shark rising upward in murky water—is enough to inject fear into the hearts of would-be swimmers. Other thrillers have perpetuated the theme of sharks as villans.",
+            "description": "Answer: 450 and 27. Sharks, especially great whites, were catapulted into the public eye with the release of the film Jaws in the summer of 1975. The film is the story of a massive great white that terrorizes a seaside community, and the image of the cover alone—the exposed jaws of a massive shark rising upward in murky water—is enough to inject fear into the hearts of would-be swimmers. Other thrillers have perpetuated the theme of sharks as villans.",
             "answer": 0,
             "alternatives": [
                 "450 and 27",
@@ -105,8 +105,8 @@
         },
         {
             "image": "/images/questions/question9.jpg",
-            "title": "What sharks don’t like to eat to feed themselves?",
-            "description": "Once you get below 10 metres depth, you can’t see red or yellow! If you cut yourself your blood looks blue.",
+            "title": "What food is not part of the shark diet?",
+            "description": "Answer: You. They eat what they eat. Those attacks on humans is only because of their poor eye sight. When the prey is clearly visible, in the sun light, they will not eat but just observe what it is. But sometimes, suppose a bleeding animal or human can disturb their senses and make them aggressive.",
             "answer": 2,
             "alternatives": [
                 "Fish",
@@ -114,6 +114,19 @@
                 "You",
                 "Crustaceans",
                 "Seal"   
+            ]
+        },
+        {
+            "image": "/images/questions/question10.gif",
+            "title": "Which marine being that performs self cloning?",
+            "description": "Answer: Jellyfish. Auto-cloning. While many scientists spend their lives studying techniques to make human cloning possible, jellyfish already do this naturally.",
+            "answer": 2,
+            "alternatives": [
+                "Squid",
+                "Octopus",
+                "Jellyfish",
+                "Crustaceans",
+                "Seahorse"   
             ]
         }
     ],
