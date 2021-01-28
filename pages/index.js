@@ -17,6 +17,7 @@ import QuizContainer from '../src/components/QuizContainer';
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>

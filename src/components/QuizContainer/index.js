@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const QuizContainer = styled.div`
+display: inline-block;
   width: 100%;
   max-width: 350px;
   padding-top: 45px;
