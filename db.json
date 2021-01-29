@@ -132,7 +132,8 @@
     ],
     "external": [
         "https://aluraquiz-wow.yuriramosc.vercel.app/",
-        ""
+        "https://quiz-valorant.johnatanivini.vercel.app/",
+        "https://covid19quiz.felipepereirapinto.vercel.app/"
     ],
     "theme": {
         "colors": {

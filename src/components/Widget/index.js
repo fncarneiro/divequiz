@@ -63,6 +63,11 @@ Widget.Topic = styled.a`
   &:focus {
     opacity: .5;
   }
+
+  /* &:disabled {
+    background-color: ${({ theme }) => theme.colors.blue_groto};
+    cursor: not-allowed;
+  } */
 `;
 
 export default Widget;
