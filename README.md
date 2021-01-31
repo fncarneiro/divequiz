@@ -20,7 +20,10 @@
 <p>
  <a href="https://www.alura.com.br/">
   <img src="https://www.alura.com.br/assets/img/alura-logo-blue.1570550707.svg" class="page-image__logo__react" alt="Alura Logo">      
-      </a> Project developed during Alura React / Next Immersion.
+      </a> 
+  </p>
+  <p>
+  Project developed during Alura React / Next Immersion.
   </p>
 
 
