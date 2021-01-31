@@ -16,7 +16,7 @@
   </a>
 </p>
 
-> Dive Quiz
+> Scuba Diving Quiz
 > <img src="https://github.com/fncarneiro/divequiz/blob/main/public/images/extras/DiveQuiz.png" alt="Dive Quiz">  
 
 <p>

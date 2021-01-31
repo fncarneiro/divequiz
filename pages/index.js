@@ -52,6 +52,7 @@ export default function Home() {
                 onChange={(event) => { setName(event.target.value); }}
                 placeholder="Type your name."
                 value={name}
+                autoFocus="true"
               />
               <Button type="submit" disabled={name.length === 0}>
                 {`Let´s Play  ${name}`}
@@ -84,7 +85,8 @@ export default function Home() {
                   <li key={linkExterno}>
                     <Widget.Topic
                       as={Link}
-                      href={`/quiz/${projectName}___${githubUser}`}
+                      isDisabled={name.length === 0}
+                      href={name.length === 0 ? '/#' : `/quiz/${projectName}___${githubUser}`}
                     >
                       {`${githubUser} - ${projectName}`}
                     </Widget.Topic>

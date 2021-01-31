@@ -51,23 +51,20 @@ Widget.Topic = styled.a`
   outline: 0;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.contrastText};
+  color: ${(prop) => (prop.isDisabled ? ({ theme }) => `${theme.colors.contrastText}70` : ({ theme }) => `${theme.colors.contrastText}`)};
   background-color: ${({ theme }) => `${theme.colors.transparent}`};
+
   padding: 10px 15px;
   margin-bottom: 8px;
-  cursor: pointer;
+  cursor: ${(prop) => (prop.isDisabled ? 'not-allowed' : 'pointer')};
   border-radius: ${({ theme }) => theme.borderRadius};
   transition: .3s;
   display: block;
-  
+    
   &:hover,
   &:focus {
     opacity: .5;
-  }
-
-  /* &:disabled {
-    background-color: ${({ theme }) => theme.colors.blue_groto};
-    cursor: not-allowed;
-  } */
+  }  
 `;
 
 export default Widget;
