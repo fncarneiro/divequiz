@@ -18,9 +18,9 @@
 
 > Dive Quiz
 <p>
-Project developed during <a href="https://www.alura.com.br/">
+ <a href="https://www.alura.com.br/">
   <img src="https://www.alura.com.br/assets/img/alura-logo-blue.1570550707.svg" class="page-image__logo__react" alt="Alura Logo">      
-      </a> Alura React / Next immersion.
+      </a> Project developed during Alura React / Next Immersion.
   </p>
 
 
