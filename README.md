@@ -28,7 +28,7 @@
 
 
 
-### 🏠 [Homepage](https://vercel.com/fncarneiro/divequiz)
+### 🏠 [Homepage](https://divequiz.fncarneiro.vercel.app/)
 
 ## Prerequisites
 
