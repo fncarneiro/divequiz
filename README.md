@@ -9,7 +9,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
   <a href="https://github.com/fncarneiro/divequiz/blob/master/LICENSE" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/fncarneiro/divequiz" />
+    <img alt="License: ISC" src="https://img.shields.io/github/license/isc" />
   </a>
   <a href="https://twitter.com/o\_fe" target="_blank">
     <img alt="Twitter: o\_fe" src="https://img.shields.io/twitter/follow/o\_fe.svg?style=social" />
