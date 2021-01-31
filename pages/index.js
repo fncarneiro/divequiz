@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+import Link from '../src/components/Link';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
@@ -83,7 +83,7 @@ export default function Home() {
                 return (
                   <li key={linkExterno}>
                     <Widget.Topic
-                      //as={Link}
+                      as={Link}
                       href={`/quiz/${projectName}___${githubUser}`}
                     >
                       {`${githubUser} - ${projectName}`}

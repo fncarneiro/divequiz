@@ -2,6 +2,7 @@
 import React, { useReducer } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import Router from 'next/router';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
@@ -13,6 +14,8 @@ import LoadingWidget from '../../components/LoadingWidget';
 import BackLinkArrow from '../../components/BackLinkArrow';
 
 function ResultWidget({ results }) {
+  const { name } = Router.query;
+
   return (
     <Widget
       as={motion.section}
@@ -30,9 +33,8 @@ function ResultWidget({ results }) {
       </Widget.Header>
 
       <Widget.Content>
-        <p>
-          You've got
-          {' '}
+        <h3>
+          {`${name} you've got `}
           {/* {results.reduce((somatoriaAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
             if (isAcerto) {
@@ -46,7 +48,7 @@ function ResultWidget({ results }) {
           </strong>
           {' '}
           questions.
-        </p>
+        </h3>
         <ul>
           {results.map((result, index) => (
             <li key={`result_${result}`}>
@@ -101,7 +103,16 @@ function QuestionWidget({
   `;
 
     return (
-      <Widget>
+      <Widget
+        as={motion.div}
+        animate={{
+          scale: [1, 2, 2, 1, 1],
+          rotate: [0, 0, 270, 270, 0],
+          borderRadius: ['20%', '20%', '50%', '50%', '20%'],
+        }}
+        // animate={{ scale: 1 }}
+        // transition={{ duration: 0.5 }}
+      >
         <Widget.Header>
           <h3>
             {isCorrect ? 'Correct answer.' : 'Wrong answer.'}
@@ -121,12 +132,12 @@ function QuestionWidget({
       <Widget.Header>
         <BackLinkArrow href="/" />
         <h3>
-          {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
+          {`Question ${questionIndex + 1} of ${totalQuestions}`}
         </h3>
       </Widget.Header>
 
       <img
-        alt="Loading question..."
+        alt="Loading questions ..."
         style={{
           width: '100%',
           height: '150px',
@@ -171,8 +182,7 @@ function QuestionWidget({
                   style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
-                  onChange={() => setSelectedAlternative(alternativeIndex)}
-                  checked={hasAlternativeSelected}
+                  onClick={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
                 />
                 {alternative}
@@ -194,7 +204,7 @@ function QuestionWidget({
 const screenStates = {
   QUIZ: 'QUIZ',
   LOADING: 'LOADING',
-  QUESTION: 'QUESTION',
+  ANSWERED: 'ANSWERED',
   RESULT: 'RESULT',
 };
 
