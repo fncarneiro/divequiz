@@ -19,7 +19,7 @@
 > Dive Quiz
 <p>
 Project developed during <a href="https://www.alura.com.br/">
-   <img alt="Logo Alura" src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" />       
+   <img src="/assets/img/imersoes/react-2/logo-imersao-react-nextjs.1609362171.svg" alt="">       
       </a> Alura React / Next immersion.
   </p>
 
