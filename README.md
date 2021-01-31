@@ -17,6 +17,8 @@
 </p>
 
 > Dive Quiz
+> <img src="https://github.com/fncarneiro/divequiz/blob/main/public/images/questions/question1.jpg" alt="Dive Quiz">  
+
 <p>
  <a href="https://www.alura.com.br/">
   <img src="https://www.alura.com.br/assets/img/alura-logo-blue.1570550707.svg" class="page-image__logo__react" alt="Alura Logo">      
