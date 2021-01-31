@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to DiveQuiz 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <img src="https://img.shields.io/badge/node-14.15.x-blue.svg" />
+  <img src="https://img.shields.io/badge/react-16.8.x-blue.svg" />
   <a href="https://github.com/fncarneiro/divequiz#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
