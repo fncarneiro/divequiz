@@ -17,11 +17,10 @@
 </p>
 
 > Dive Quiz
-<p>
 Project developed during <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+   <img alt=alt="Logo Alura" src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" />       
       </a> Alura React / Next immersion.
-</p>
+
 
 
 ### 🏠 [Homepage](https://vercel.com/fncarneiro/divequiz)
