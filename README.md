@@ -16,9 +16,13 @@
   </a>
 </p>
 
-> Alura Dive Quiz Immerson
+> Dive Quiz
+Project developed during <a href="https://www.alura.com.br/">
+        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+      </a> Alura React / Next immersion.
 
-### 🏠 [Homepage](https://github.com/fncarneiro/divequiz#readme)
+
+### 🏠 [Homepage](https://vercel.com/fncarneiro/divequiz)
 
 ## Prerequisites
 
