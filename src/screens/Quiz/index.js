@@ -3,6 +3,7 @@ import React, { useReducer } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import Router from 'next/router';
+import { Lottie } from '@crello/react-lottie';
 import Widget from '../../components/Widget';
 import QuizLogo from '../../components/QuizLogo';
 import QuizBackground from '../../components/QuizBackground';
@@ -10,11 +11,19 @@ import QuizContainer from '../../components/QuizContainer';
 import AlternativesForm from '../../components/AlternativesForm';
 import Button from '../../components/Button';
 import LoadingWidget from '../../components/LoadingWidget';
-// import loadingAnimation from './animations/loading.json';
+import jelly from './animations/jelly.json';
 import BackLinkArrow from '../../components/BackLinkArrow';
 
 function ResultWidget({ results }) {
   const { name } = Router.query;
+  const Result = styled.label`  
+    display: block  ;  
+    justify-content: center;
+    text-align: center;
+      /* display: flex;
+    justify-content: flex-start;
+    align-items: center; */
+  `;
 
   return (
     <Widget
@@ -33,7 +42,15 @@ function ResultWidget({ results }) {
       </Widget.Header>
 
       <Widget.Content>
+
         <h3>
+          <Lottie
+            width="250px"
+            height="250px"
+            className="lottie-container basic"
+            config={{ animationData: jelly, loop: true, autoplay: true }}
+          />
+
           {`${name} you've got `}
           {/* {results.reduce((somatoriaAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
@@ -52,14 +69,27 @@ function ResultWidget({ results }) {
         <ul>
           {results.map((result, index) => (
             <li key={`result_${result}`}>
-              - Question
-              {' '}
+              {result === true ?
+                <img src="images/extras/ok.png" style={{
+                  width: '7%',
+                  height: '7%',
+                }} />
+                :
+                <img src="images/extras/cancel.png" style={{
+                  width: '7%',
+                  height: '7%',
+                }} />
+              }
+              {'    '}
+              Question
+              {'    '}
               {index + 1}
-              {' '}
-              {result === true ? 'right' : 'wrong'}
+              {'    '}
+              {result === true ? 'right.' : 'wrong.'}
             </li>
           ))}
         </ul>
+
       </Widget.Content>
     </Widget>
   );
@@ -110,8 +140,8 @@ function QuestionWidget({
           rotate: [0, 0, 270, 270, 0],
           borderRadius: ['20%', '20%', '50%', '50%', '20%'],
         }}
-        // animate={{ scale: 1 }}
-        // transition={{ duration: 0.5 }}
+      // animate={{ scale: 1 }}
+      // transition={{ duration: 0.5 }}
       >
         <Widget.Header>
           <h3>
@@ -209,7 +239,7 @@ const screenStates = {
 };
 
 export default function QuizPage({ externalQuestions, externalBg }) {
-  const [screenState, setScreenState] = React.useState(screenStates.LOADING);
+  const [screenState, setScreenState] = React.useState(screenStates.QUIZ);
   const totalQuestions = externalQuestions.length;
   const bg = externalBg;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);

@@ -131,8 +131,8 @@
         }
     ],
     "external": [
-        "https://aluraquiz-wow.yuriramosc.vercel.app/",
-        "https://quiz-valorant.johnatanivini.vercel.app/",
+        "https://alura-quiz-base.abnner13.vercel.app/",
+        "https://f1quiz.vercel.app/quiz?playerName=iuihi",
         "https://covid19quiz.felipepereirapinto.vercel.app/"
     ],
     "theme": {
