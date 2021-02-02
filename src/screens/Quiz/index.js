@@ -239,7 +239,7 @@ const screenStates = {
 };
 
 export default function QuizPage({ externalQuestions, externalBg }) {
-  const [screenState, setScreenState] = React.useState(screenStates.QUIZ);
+  const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const totalQuestions = externalQuestions.length;
   const bg = externalBg;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
