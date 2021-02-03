@@ -4,7 +4,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import QuizScreen from '../../src/screens/Quiz';
 
-export default function QuizDaGaleraPage({ dbExterno }) {
+export default function QuizGuysPage({ dbExterno }) {
   // const [db, setDb] React.useState({})
   // React.useEffect(() => {
   // });
@@ -23,13 +23,13 @@ export async function getServerSideProps(context) {
 
   try {
     const dbExterno = await fetch(`https://${projectName}.${githubUser}.vercel.app/api/db`)
-      .then((respostaDoServer) => {
-        if (respostaDoServer.ok) {
-          return respostaDoServer.json();
+      .then((responseServer) => {
+        if (responseServer.ok) {
+          return responseServer.json();
         }
-        throw new Error('Falha em pegar os dados');
+        throw new Error('Fail on get data.');
       })
-      .then((respostaConvertidaEmObjeto) => respostaConvertidaEmObjeto)
+      .then((responseObjet) => responseObjet)
       .catch((err) => {
         console.error(err);
       });

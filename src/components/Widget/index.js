@@ -33,6 +33,19 @@ Widget.Header = styled.header`
   }
 `;
 
+Widget.HeaderDesc = styled.header`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  
+  background-color: ${({ theme }) => theme.colors.mainBg};
+  
+  * {
+    margin: 0;
+  }
+`;
+
 Widget.Content = styled.div`
   padding: 24px 32px 32px 32px;
   & > *:first-child {
@@ -64,7 +77,10 @@ Widget.Topic = styled.a`
   &:hover,
   &:focus {
     opacity: .5;
+    transform: translatex(10px);
   }  
+
+  
 `;
 
 export default Widget;

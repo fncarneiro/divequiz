@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import QuizScreen from '../../src/screens/Quiz';
 import db from '../../db.json';
 
-export default function QuizDaGaleraPage() {
+export default function QuizGuysPage() {
   return (
     <ThemeProvider theme={db.theme}>
       <QuizScreen

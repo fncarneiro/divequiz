@@ -16,14 +16,6 @@ import BackLinkArrow from '../../components/BackLinkArrow';
 
 function ResultWidget({ results }) {
   const { name } = Router.query;
-  const Result = styled.label`  
-    display: block  ;  
-    justify-content: center;
-    text-align: center;
-      /* display: flex;
-    justify-content: flex-start;
-    align-items: center; */
-  `;
 
   return (
     <Widget
@@ -40,17 +32,15 @@ function ResultWidget({ results }) {
         <BackLinkArrow href="/" />
         QUIZ RESULT
       </Widget.Header>
-
       <Widget.Content>
 
+        <Lottie
+          width="250px"
+          height="120px"
+          className="lottie-container basic"
+          config={{ animationData: jelly, loop: true, autoplay: true }}
+        />
         <h3>
-          <Lottie
-            width="250px"
-            height="250px"
-            className="lottie-container basic"
-            config={{ animationData: jelly, loop: true, autoplay: true }}
-          />
-
           {`${name} you've got `}
           {/* {results.reduce((somatoriaAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
@@ -67,29 +57,41 @@ function ResultWidget({ results }) {
           questions.
         </h3>
         <ul>
+
           {results.map((result, index) => (
-            <li key={`result_${result}`}>
-              {result === true ?
-                <img src="images/extras/ok.png" style={{
-                  width: '7%',
-                  height: '7%',
-                }} />
-                :
-                <img src="images/extras/cancel.png" style={{
-                  width: '7%',
-                  height: '7%',
-                }} />
-              }
+            // <li key={`result_${result}`}>
+            <Widget.Topic>
+              {result === true
+                ? (
+                  <img
+                    alt="ok"
+                    src="images/extras/ok.png"
+                    style={{
+                      width: '7%',
+                      height: '7%',
+                    }}
+                  />
+                )
+                : (
+                  <img
+                    alt="cancel"
+                    src="images/extras/cancel.png"
+                    style={{
+                      width: '7%',
+                      height: '7%',
+                    }}
+                  />
+                )}
               {'    '}
               Question
               {'    '}
               {index + 1}
               {'    '}
               {result === true ? 'right.' : 'wrong.'}
-            </li>
+            </Widget.Topic>
+            // </li>
           ))}
         </ul>
-
       </Widget.Content>
     </Widget>
   );
@@ -114,6 +116,37 @@ function ResultWidget({ results }) {
 //   );
 // }
 
+function DescriptionWidget({ isCorrect, question }) {
+  const About = styled.h4`    
+    color: ${({ theme }) => theme.colors.salmon};
+`;
+
+  return (
+    <Widget
+      as={motion.div}
+      animate={{
+        scale: [1, 1, 1, 1, 1],
+        rotate: [0, 0, 70, 70, 0],
+        // borderRadius: ['20%', '20%', '20%', '20%', '20%'],
+      }}
+    >
+      <Widget.HeaderDesc>
+        {isCorrect
+          ? <h2 style={{ color: ' #4CAF50' }}>'Correct answer.'</h2>
+          : <h2 style={{ color: ' #FF5722' }}>'Wrong answer.'</h2>}
+      </Widget.HeaderDesc>
+      <Widget.Content>
+        <About>
+          {question.description}
+        </About>
+      </Widget.Content>
+      {/* <Button>
+        Next Question
+      </Button> */}
+    </Widget>
+  );
+}
+
 function QuestionWidget({
   question,
   questionIndex,
@@ -126,36 +159,7 @@ function QuestionWidget({
   const questionId = `question__${questionIndex}`;
   const isCorrect = selectedAlternative === question.answer;
   const hasAlternativeSelected = selectedAlternative !== undefined;
-
-  function DescriptionWidget() {
-    const About = styled.h4`    
-      color: ${({ theme }) => theme.colors.salmon};
-  `;
-
-    return (
-      <Widget
-        as={motion.div}
-        animate={{
-          scale: [1, 2, 2, 1, 1],
-          rotate: [0, 0, 270, 270, 0],
-          borderRadius: ['20%', '20%', '50%', '50%', '20%'],
-        }}
-      // animate={{ scale: 1 }}
-      // transition={{ duration: 0.5 }}
-      >
-        <Widget.Header>
-          <h3>
-            {isCorrect ? 'Correct answer.' : 'Wrong answer.'}
-          </h3>
-        </Widget.Header>
-        <Widget.Content>
-          <About>
-            {question.description}
-          </About>
-        </Widget.Content>
-      </Widget>
-    );
-  }
+  const [hasSubmitedAlternative, setHasSubmitedAlternative] = React.useState(undefined);
 
   return (
     <Widget>
@@ -187,11 +191,13 @@ function QuestionWidget({
           onSubmit={(event) => {
             event.preventDefault();
             setIsQuestionSubmited(true);
+            setHasSubmitedAlternative(true);
             setTimeout(() => {
-              addResult(isCorrect);
               onSubmit();
+              addResult(isCorrect);
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
+              setHasSubmitedAlternative(undefined);
             }, 10 * 1000);
           }}
         >
@@ -214,17 +220,17 @@ function QuestionWidget({
                   name={questionId}
                   onClick={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
+                  disabled={hasSubmitedAlternative}
                 />
                 {alternative}
               </Widget.Topic>
             );
           })}
 
-          <Button type="submit" disabled={!hasAlternativeSelected}>
-            Confirmar
+          <Button type="submit" disabled={!hasAlternativeSelected || hasSubmitedAlternative}>
+            Confirm
           </Button>
-          {isQuestionSubmited && <DescriptionWidget />}
-          {/* {isQuestionSubmited && !isCorrect && <DescriptionWidget isCorrect={false} />} */}
+          {isQuestionSubmited && <DescriptionWidget question={question} isCorrect={isCorrect} />}
         </AlternativesForm>
       </Widget.Content>
     </Widget>
@@ -234,12 +240,11 @@ function QuestionWidget({
 const screenStates = {
   QUIZ: 'QUIZ',
   LOADING: 'LOADING',
-  ANSWERED: 'ANSWERED',
   RESULT: 'RESULT',
 };
 
 export default function QuizPage({ externalQuestions, externalBg }) {
-  const [screenState, setScreenState] = React.useState(screenStates.QUIZ);
+  const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const totalQuestions = externalQuestions.length;
   const bg = externalBg;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
