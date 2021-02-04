@@ -132,8 +132,8 @@ function DescriptionWidget({ isCorrect, question }) {
     >
       <Widget.HeaderDesc>
         {isCorrect
-          ? <h2 style={{ color: ' #4CAF50' }}>'Correct answer.'</h2>
-          : <h2 style={{ color: ' #FF5722' }}>'Wrong answer.'</h2>}
+          ? <h2 style={{ color: ' #4CAF50' }}>Correct answer.</h2>
+          : <h2 style={{ color: ' #FF5722' }}>Wrong answer.</h2>}
       </Widget.HeaderDesc>
       <Widget.Content>
         <About>
