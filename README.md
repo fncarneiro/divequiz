@@ -8,8 +8,8 @@
   <a href="https://github.com/fncarneiro/divequiz/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/fncarneiro/my-invest-server/blob/master/LICENSE" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/fncarneiro/my-invest-server" />
+  <a href="https://github.com/fncarneiro/divequiz/blob/master/LICENSE" target="_blank">
+    <img alt="License: ISC" src="https://img.shields.io/github/license/fncarneiro/divequiz" />
   </a>
   <a href="https://twitter.com/o_fe" target="_blank">
     <img alt="Twitter: o_fe" src="https://img.shields.io/twitter/follow/o_fe.svg?style=social" />
@@ -75,4 +75,4 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2021 [Fernando N Carneiro](https://github.com/fncarneiro).<br />
-This project is [ISC](https://github.com/fncarneiro/my-invest-server/blob/master/LICENSE) licensed.
+This project is [ISC](https://github.com/fncarneiro/divequiz/blob/master/LICENSE) licensed.
