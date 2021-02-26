@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to DiveQuiz 👋</h1>
+<h1 align="center">Welcome to Scuba Diving Quiz 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/react-16.8.x-blue.svg" />
@@ -16,7 +16,8 @@
   </a>
 </p>
 
-> Scuba Diving Quiz
+> Scuba Diving Quiz - Test your knowledge of marine life and scuba diving.
+> 
 > <img src="https://github.com/fncarneiro/divequiz/blob/main/public/images/extras/DiveQuiz.png" alt="Dive Quiz">  
 
 <p>
