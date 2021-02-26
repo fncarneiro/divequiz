@@ -17,19 +17,18 @@
 </p>
 
 > Scuba Diving Quiz - Test your knowledge of marine life and scuba diving.
-> 
-> <img src="https://github.com/fncarneiro/divequiz/blob/main/public/images/extras/DiveQuiz.png" alt="Dive Quiz">  
-
+ 
+ <a href="https://divequiz.fncarneiro.vercel.app/" target="_blank">
+   <img src="https://github.com/fncarneiro/divequiz/blob/main/public/images/extras/DiveQuiz.png" alt="Dive Quiz"> 
+ </a>
+ 
 <p>
  <a href="https://www.alura.com.br/">
   <img src="https://www.alura.com.br/assets/img/alura-logo-blue.1570550707.svg" class="page-image__logo__react" alt="Alura Logo">    
   <br>
-  - Project developed during Alura React / Next Immersion.
- </a>    
-  
-</p>
-
-
+  Project developed during Alura React / Next Immersion.
+ </a>
+</p> 
 
 ### 🏠 [Homepage](https://divequiz.fncarneiro.vercel.app/)
 
